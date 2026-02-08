@@ -21,7 +21,7 @@
 
     packages.${system} = {
       v-iso = self.nixosConfigurations.v-machine.config.system.build.images.iso;
-      v-img = self.nixosConfigurations.v-machine.config.system.build.images.raw;
+      v-img = self.nixosConfigurations.v-machine.config.system.build.images.raw-efi;
       v-vm = self.nixosConfigurations.v-machine.config.system.build.vm;
     };
 

@@ -46,10 +46,3 @@ On any nixos system with read-write disk (eg. a booted `v-img` from above), simp
 nixos-rebuild --flake .#v-machine switch
 ```
 ... which switches the current system in place to the new one defined by the config.
-
-If the evaluation fails because of missing filesystems definition, generate a hardware config first using:
-```
-nixos-generate-config --show-hardware-config > hardware-configuration.nix
-```
-Then add that file to your repo and import it in your configuration.nix.
-Don't forget to add the new `hardware-configuration.nix` to git.

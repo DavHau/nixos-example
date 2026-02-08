@@ -1,13 +1,13 @@
 {lib, config, pkgs, ...}: {
 
   imports = [
+    ./basic-hardware-configuration.nix
     ./nvidia.nix
     ./sway.nix
+    ./output-formats.nix
   ];
 
   system.stateVersion = "25.11";
-
-  boot.loader.grub.enable = true;
 
   hardware.enableAllHardware = true;
 
